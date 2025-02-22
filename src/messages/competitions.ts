@@ -56,9 +56,7 @@ export const competitions: Competition[] = [
       "How much the pet misses you while you're away",
       "Level of overall chillness",
     ],
-    correctAnswer: [
-      "How much each pet misses you based on how long you're away",
-    ],
+    correctAnswer: ["How much the pet misses you while you're away"],
   },
   // WEEK 2
   {
