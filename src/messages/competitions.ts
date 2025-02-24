@@ -156,24 +156,25 @@ export const competitions: Competition[] = [
     inputType: "text",
   },
   {
-    slug: "minis_ds_wk06_02",
+    slug: "minis_ds_wk03_01",
     week: 3,
     category: "Data Science",
     name: "Chart Type Match",
     instructions: formatCompInstructions(
       3,
       "dataScience",
-      "Identify the type of chart based on its description."
+      "Identify the type of chart shown below."
     ),
-    prompt: `This chart displays data as a series of points connected by straight lines, often used to show trends over time. What is this chart called?`,
+    image: "", // TODO: input the github raw image address
+    prompt: `This chart groups numbers into bins to show frequency. What is it called?`,
     inputType: "dropdown",
     options: ["Bar Chart", "Histogram", "Box Plot"],
     correctAnswer: ["Histogram"],
-    onSuccessMessage: `✅ Awesome, you got that right! A giveaway is the Histograms have touching bars.\nThink about how these could be used in the Esports season:
+    onSuccessMessage: `✅ Awesome, you got that right! A giveaway is the Histograms have touching bars and compare measurements over a given range.\nThink about how these could be used in the Esports season:
 - **Histogram:** shows how many Fortnite players got different kill counts in matches (0-2 kills, 3-5 kills, 6-8 kills).
 -   **Bar Chart:** compares the number of students who prefer different games (Fortnite, Minecraft, Rocket League).
 -   **Box Plot:** summarizes match scores by showing the middle score, average range, and any unusually high or low outliers.`,
-    onWrongMessage: `❌ Not quite! Bar charts use separate groups to compare categories of data, box plots show a data spread, Histograms have touching bars that compare "measurements" over a given range.\n\u200B\nA giveaway is the Histograms have touching bars.\nThink about how these could be used in the Esports season:
+    onWrongMessage: `❌ Not quite! It is a **Histogram**!\n\u200B\nA giveaway is that a Histogram has touching bars. Bar charts use separate groups to compare categories, box plots show a data spread, Histograms have touching bars that compare measurements over a given range.\nThink about how these could be used in the Esports season:
 - **Histogram:** shows how many Fortnite players got different kill counts in matches (0-2 kills, 3-5 kills, 6-8 kills).
 -   **Bar Chart:** compares the number of students who prefer different games (Fortnite, Minecraft, Rocket League).
 -   **Box Plot:** summarizes match scores by showing the middle score, average range, and any unusually high or low outliers.`,
