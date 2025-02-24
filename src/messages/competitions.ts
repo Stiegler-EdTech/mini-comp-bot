@@ -165,7 +165,8 @@ export const competitions: Competition[] = [
       "dataScience",
       "Identify the type of chart shown below."
     ),
-    image: "", // TODO: input the github raw image address
+    image:
+      "https://github.com/Stiegler-EdTech/mini-comp-bot/blob/add-data-science/images/Histogram.png?raw=true",
     prompt: `This chart groups numbers into bins to show frequency. What is it called?`,
     inputType: "dropdown",
     options: ["Bar Chart", "Histogram", "Box Plot"],
@@ -213,14 +214,23 @@ export const competitions: Competition[] = [
     slug: "minis_ds_wk04_01",
     week: 4,
     category: "Data Science",
-    name: "Graph the Facts",
+    name: "Data Pattern Recognition",
     instructions: formatCompInstructions(
       4,
       "dataScience",
-      "Guess the trend in the provide graph."
+      "What comes next in the sequence? Look at the pattern in the numbers, see if you can figure out what the pattern is. Once you do, guess the next number in the sequence!"
     ),
-    prompt: `What does this graph tell you about the trend?`,
+    prompt: "**Sequence:** 14, 98, 686, ??",
     inputType: "text",
+    correctAnswer: ["4802"],
+    onSuccessMessage:
+      "✅ Spot on! The numbers in the sequence are being multiplied by 7 each time, so **4802** is next.",
+    onWrongMessage: `❌ Oops, that's not right! The correct answer is **4802**.\n\u200B\n
+The sequence multiplies each number by **7**:\n
+- **14 × 7 = 98**
+- **98 × 7 = 686**
+- **686 × 7 = 4802**\n\u200B\n
+Next time, try dividing consecutive numbers to spot the pattern! For example, \`98 ÷ 14 = 7\` shows that 98 is 7 times larger than 14. If you get the same result each time, that's the multiplier. Here, it confirms that every step multiplies by **7**!`,
   },
   // WEEK 5
   {
