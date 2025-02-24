@@ -155,20 +155,29 @@ export const competitions: Competition[] = [
     prompt: `Write a caption for a post, advertising our latest product: **NoCrastination**.`,
     inputType: "text",
   },
-  // {
-  //   week: 3,
-  //   category: "Data Science",
-  //   name: "Graph the Trend",
-  //   instructions: formatCompInstructions(
-  //     3,
-  //     "dataScience",
-  //     "Predict the next data points on a trend graph."
-  //   ),
-  //   prompt: `Predict the next data points.`,
-  //   inputType: "dropdown",
-  //   options: ["10%", "15%", "20%"],
-  //   correctAnswer: ["15%"],
-  // },
+  {
+    slug: "minis_ds_wk06_02",
+    week: 3,
+    category: "Data Science",
+    name: "Chart Type Match",
+    instructions: formatCompInstructions(
+      3,
+      "dataScience",
+      "Identify the type of chart based on its description."
+    ),
+    prompt: `This chart displays data as a series of points connected by straight lines, often used to show trends over time. What is this chart called?`,
+    inputType: "dropdown",
+    options: ["Bar Chart", "Histogram", "Box Plot"],
+    correctAnswer: ["Histogram"],
+    onSuccessMessage: `✅ Awesome, you got that right! A giveaway is the Histograms have touching bars.\nThink about how these could be used in the Esports season:
+- **Histogram:** shows how many Fortnite players got different kill counts in matches (0-2 kills, 3-5 kills, 6-8 kills).
+-   **Bar Chart:** compares the number of students who prefer different games (Fortnite, Minecraft, Rocket League).
+-   **Box Plot:** summarizes match scores by showing the middle score, average range, and any unusually high or low outliers.`,
+    onWrongMessage: `❌ Not quite! Bar charts use separate groups to compare categories of data, box plots show a data spread, Histograms have touching bars that compare "measurements" over a given range.\n\u200B\nA giveaway is the Histograms have touching bars.\nThink about how these could be used in the Esports season:
+- **Histogram:** shows how many Fortnite players got different kill counts in matches (0-2 kills, 3-5 kills, 6-8 kills).
+-   **Bar Chart:** compares the number of students who prefer different games (Fortnite, Minecraft, Rocket League).
+-   **Box Plot:** summarizes match scores by showing the middle score, average range, and any unusually high or low outliers.`,
+  },
   // WEEK 4
   {
     slug: "minis_cs_wk04_01",
