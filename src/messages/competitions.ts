@@ -268,14 +268,19 @@ Next time, try dividing consecutive numbers to spot the pattern! For example, \`
     slug: "minis_ds_wk05_01",
     week: 5,
     category: "Data Science",
-    name: "Graph the Facts (Part 2)",
+    name: "Is it an Outlier?",
     instructions: formatCompInstructions(
       5,
       "dataScience",
-      "Analyze this trend graph and explain it."
+      "Examine the highlighted data point. Does it seem to be an outlier compared to the rest of the data set?"
     ),
-    prompt: `What does this graph tell you about the trend?`,
-    inputType: "text",
+    prompt: `Data Set: [21, 22, 20, 21, 23, 22, 21, 37, 22]\nHighlighted Data Point: 37`,
+    inputType: "button",
+    options: ["Yes", "No"],
+    correctAnswer: ["Yes"],
+    onSuccessMessage: "Correct! 37 is much higher than the other numbers.",
+    onWrongMessage:
+      "Not quite! 37 is way above the typical range of 20-23, making it an outlier.",
   },
   // WEEK 6
 ]
