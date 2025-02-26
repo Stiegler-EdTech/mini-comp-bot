@@ -73,10 +73,8 @@ export const competitions: Competition[] = [
     inputType: "button",
     options: ["1", "2", "3", "4"],
     correctAnswer: ["4"],
-    onSuccessMessage:
-      "🎉 You got it! `Example123` has 4 weaknesses! It is too short, the letters used form a simple word, the numbers are in a stereotypical order, and there are no special characters.", // If you're intersted in practicing your evaluation skills some more, try sending this command to the chat: `/sneakin-or-tweakin`",
-    onWrongMessage:
-      "❌ Oops! That is incorrect. `Example123` has 4 weaknesses! It is too short, the letters used form a simple word, the numbers are in a stereotypical order, and there are no special characters.", // If you want to test your password evaluation skills some more, try sending this command to the chat: /sus-or-trust",
+    onSuccessMessage: `🎉 You got it! \`Example123\` has 4 weaknesses! It is too short, the letters used form a simple word, the numbers are in a stereotypical order, and there are no special characters.\n\u200B\nYou just got **500** Silver Coins:money_with_wings: :moneybag:! Head on over to [The NØTWØRK](https://thenotwork.org/challenges)`, // If you're intersted in practicing your evaluation skills some more, try sending this command to the chat: `/sneakin-or-tweakin`",
+    onWrongMessage: `❌ Oops! That is incorrect. \`Example123\` has 4 weaknesses! It is too short, the letters used form a simple word, the numbers are in a stereotypical order, and there are no special characters.\n\u200B\nYou just got **500** Silver Coins:money_with_wings: :moneybag:! Head on over to [The NØTWØRK](https://thenotwork.org/challenges)`, // If you want to test your password evaluation skills some more, try sending this command to the chat: /sus-or-trust",
   },
   {
     slug: "minis_cc_wk02_01",
@@ -86,7 +84,7 @@ export const competitions: Competition[] = [
     instructions: formatCompInstructions(
       2,
       "contentCreation",
-      `MaRKeT reSEarCh suggests that many students struggle with ProRASstiNAtiOn. Stiegler EdTech has created a product that is sweeping the nation. This new product is called **NoCrastination**. We need your help to create a logo for this product. Think of a logo that is fun, memorable, and descriptive of the product idea. The best logo will be used in a post on the NØTWØRK!\n\u200B\nTry using tools like Leonardo.ai or Canva to generate images or create custom designs. Draw some inspiration from the logo shown below.`
+      `MaRKeT reSEarCh suggests that many students struggle with ProRASstiNAtiOn. Stiegler EdTech has created a product that is sweeping the nation. This new product is called **NoCrastination**. We need your help to create a logo for this product. Think of something that is fun, memorable, and descriptive of the product idea. The best logo will be used in a post on the NØTWØRK!\n\u200B\nTry using tools like Leonardo.ai or Canva to generate images or create your design. We've supplied an example to help with some inspiration; check out the logo shown below! We made that one with Leonardo.ai💪`
     ),
     image:
       "https://github.com/Stiegler-EdTech/mini-comp-bot/blob/main/images/NoCrastinationLogo.jpeg?raw=true",
