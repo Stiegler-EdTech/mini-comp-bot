@@ -74,24 +74,23 @@ export const competitions: Competition[] = [
     options: ["1", "2", "3", "4"],
     correctAnswer: ["4"],
     onSuccessMessage:
-      "🎉 You got it! `Example123` has 4 weaknesses! It is too short, the letters used form a simple word, the numbers are in a stereotypical order, and there are no special characters.", // If you're intersted in practicing your evaluation skills some more, try sending this command to the chat: `/sneakin-or-tweakin`",
+      "🎉 You got it! `Example123` has 4 weaknesses! It is too short, the letters used form a simple word, the numbers are in a stereotypical order, and there are no special characters.",
     onWrongMessage:
-      "❌ Oops! That is incorrect. `Example123` has 4 weaknesses! It is too short, the letters used form a simple word, the numbers are in a stereotypical order, and there are no special characters.", // If you want to test your password evaluation skills some more, try sending this command to the chat: /sus-or-trust",
+      "❌ Oops! That is incorrect. `Example123` has 4 weaknesses! It is too short, the letters used form a simple word, the numbers are in a stereotypical order, and there are no special characters.",
   },
   {
-    slug: "minis_cc_wk02_01",
+    slug: "minis_cc_wk03_01",
     week: 2,
     category: "Content Creation",
     name: "Patent That pt.2",
     instructions: formatCompInstructions(
       2,
       "contentCreation",
-      `MaRKeT reSEarCh suggests that many students struggle with ProRASstiNAtiOn. Stiegler EdTech has created a product that is sweeping the nation. This new product is called **NoCrastination**. We need your help to create a logo for this product. Think of a logo that is fun, memorable, and descriptive of the product idea. The best logo will be used in a post on the NØTWØRK!\n\u200B\nTry using tools like Leonardo.ai or Canva to generate images or create custom designs. Draw some inspiration from the logo shown below.`
+      "Write a caption for a post, advertising our latest product: **NoCrastination**. The best caption will be used in the post on the NØTWØRK!"
     ),
     image:
-      "https://github.com/Stiegler-EdTech/mini-comp-bot/blob/main/images/NoCrastinationLogo.jpeg?raw=true",
-    prompt: "",
-    inputType: "image",
+      "https://github.com/Stiegler-EdTech/mini-comp-bot/blob/main/images/NoCrastination_SM_Post.jpeg?raw=true",
+    inputType: "text",
   },
   {
     slug: "minis_ds_wk02_01",
@@ -101,18 +100,17 @@ export const competitions: Competition[] = [
     instructions: formatCompInstructions(
       2,
       "dataScience",
-      "Observe the progression on the graph. See if you can guess what is being represented here!"
+      "See if you can guess what the graph is representing!"
     ),
 
     image:
       "https://raw.githubusercontent.com/Stiegler-EdTech/mini-comp-bot/refs/heads/main/images/TV_Consumption.webp",
-    prompt: ``,
     inputType: "dropdown",
     options: [
       "Finding something to watch vs. watching it",
       "Amount of sugar in a Pixy Stix vs protein",
-      "Ratio or People to Penguins in Alaska",
-      "Ratio of people who prefer dogs to cats",
+      "Ratio of people to penguins in Antarctica",
+      "Ratio of people who prefer dogs to Chameleons",
     ],
     correctAnswer: ["Finding something to watch vs. watching it"],
   },
@@ -141,19 +139,19 @@ export const competitions: Competition[] = [
     onWrongMessage: `❌ Oh no, you got PHISHed 😳🎣🎣😱!! The second and third emails are the PHISHes. \n\n${phishesAnswers}`,
   },
   {
-    slug: "minis_cc_wk03_01",
+    slug: "minis_cc_wk02_01",
     week: 3,
     category: "Content Creation",
     name: "Patent That pt.3",
     instructions: formatCompInstructions(
       3,
       "contentCreation",
-      "Stiegler's content creation team is brainstorming caption ideas for a social media post. Help them out by filling in the blank! The best caption will be used in the post on the NØTWØRK!"
+      `MaRKeT reSEarCh suggests that many students struggle with ProRASstiNAtiOn. Stiegler EdTech has created a product that is sweeping the nation. This new product is called **NoCrastination**. We need your help to create a logo for this product. Think of a logo that is fun, memorable, and descriptive of the product idea. The best logo will be used in a post on the NØTWØRK!\n\u200B\nTry using tools like Leonardo.ai or Canva to generate images or create custom designs. Draw some inspiration from the logo shown below.`
     ),
     image:
-      "https://github.com/Stiegler-EdTech/mini-comp-bot/blob/main/images/NoCrastination_SM_Post.jpeg?raw=true",
-    prompt: `Write a caption for a post, advertising our latest product: **NoCrastination**.`,
-    inputType: "text",
+      "https://github.com/Stiegler-EdTech/mini-comp-bot/blob/main/images/NoCrastinationLogo.jpeg?raw=true",
+    prompt: "",
+    inputType: "image",
   },
   {
     slug: "minis_ds_wk03_01",
