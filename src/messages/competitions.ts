@@ -79,7 +79,7 @@ export const competitions: Competition[] = [
       "❌ Oops! That is incorrect. `Example123` has 4 weaknesses! It is too short, the letters used form a simple word, the numbers are in a stereotypical order, and there are no special characters.",
   },
   {
-    slug: "minis_cc_wk03_01",
+    slug: "minis_cc_wk02_01",
     week: 2,
     category: "Content Creation",
     name: "Patent That pt.2",
@@ -139,7 +139,7 @@ export const competitions: Competition[] = [
     onWrongMessage: `❌ Oh no, you got PHISHed 😳🎣🎣😱!! The second and third emails are the PHISHes. \n\n${phishesAnswers}`,
   },
   {
-    slug: "minis_cc_wk02_01",
+    slug: "minis_cc_wk03_01",
     week: 3,
     category: "Content Creation",
     name: "Patent That pt.3",
