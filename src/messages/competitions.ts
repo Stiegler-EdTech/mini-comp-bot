@@ -67,7 +67,7 @@ export const competitions: Competition[] = [
     instructions: formatCompInstructions(
       2,
       "cybersecurity",
-      "Identify the number of weaknesses in the given password"
+      "Identify the number of weaknesses in the given password! 🔒"
     ),
     prompt: `**Password:** Example123`,
     inputType: "button",
@@ -86,7 +86,7 @@ export const competitions: Competition[] = [
     instructions: formatCompInstructions(
       2,
       "contentCreation",
-      "Write a caption for a post, advertising our latest product: **NoCrastination**. The best caption will be used in the post on the NØTWØRK!"
+      "Write a caption for a post, advertising our latest product: **NoCrastination**. The best caption will be used in the post on the NØTWØRK! 📝 "
     ),
     image:
       "https://github.com/Stiegler-EdTech/mini-comp-bot/blob/main/images/NoCrastination_SM_Post.jpeg?raw=true",
@@ -100,7 +100,7 @@ export const competitions: Competition[] = [
     instructions: formatCompInstructions(
       2,
       "dataScience",
-      "See if you can guess what the graph is representing!"
+      "See if you can guess what the graph is representing! 📊"
     ),
 
     image:
