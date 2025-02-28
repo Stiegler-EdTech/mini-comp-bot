@@ -73,23 +73,24 @@ export const competitions: Competition[] = [
     inputType: "button",
     options: ["1", "2", "3", "4"],
     correctAnswer: ["4"],
-    onSuccessMessage: `🎉 You got it! \`Example123\` has 4 weaknesses! It is too short, the letters used form a simple word, the numbers are in a stereotypical order, and there are no special characters.\n\u200B\nYou just got **500** Silver Coins:money_with_wings: :moneybag:! Head on over to [The NØTWØRK](https://thenotwork.org/challenges)`, // If you're intersted in practicing your evaluation skills some more, try sending this command to the chat: `/sneakin-or-tweakin`",
-    onWrongMessage: `❌ Oops! That is incorrect. \`Example123\` has 4 weaknesses! It is too short, the letters used form a simple word, the numbers are in a stereotypical order, and there are no special characters.\n\u200B\nYou just got **500** Silver Coins:money_with_wings: :moneybag:! Head on over to [The NØTWØRK](https://thenotwork.org/challenges)`, // If you want to test your password evaluation skills some more, try sending this command to the chat: /sus-or-trust",
+    onSuccessMessage:
+      "🎉 You got it! `Example123` has 4 weaknesses! It is too short, the letters used form a simple word, the numbers are in a stereotypical order, and there are no special characters.",
+    onWrongMessage:
+      "❌ Oops! That is incorrect. `Example123` has 4 weaknesses! It is too short, the letters used form a simple word, the numbers are in a stereotypical order, and there are no special characters.",
   },
   {
-    slug: "minis_cc_wk02_01",
+    slug: "minis_cc_wk03_01",
     week: 2,
     category: "Content Creation",
     name: "Patent That pt.2",
     instructions: formatCompInstructions(
       2,
       "contentCreation",
-      `MaRKeT reSEarCh suggests that many students struggle with ProRASstiNAtiOn. Stiegler EdTech has created a product that is sweeping the nation. This new product is called **NoCrastination**. We need your help to create a logo for this product. Think of something that is fun, memorable, and descriptive of the product idea. The best logo will be used in a post on the NØTWØRK!\n\u200B\nTry using tools like Leonardo.ai or Canva to generate images or create your design. We've supplied an example to help with some inspiration; check out the logo shown below! We made that one with Leonardo.ai💪`
+      "Write a caption for a post, advertising our latest product: **NoCrastination**. The best caption will be used in the post on the NØTWØRK!"
     ),
     image:
-      "https://github.com/Stiegler-EdTech/mini-comp-bot/blob/main/images/NoCrastinationLogo.jpeg?raw=true",
-    prompt: "",
-    inputType: "image",
+      "https://github.com/Stiegler-EdTech/mini-comp-bot/blob/main/images/NoCrastination_SM_Post.jpeg?raw=true",
+    inputType: "text",
   },
   {
     slug: "minis_ds_wk02_01",
@@ -99,18 +100,17 @@ export const competitions: Competition[] = [
     instructions: formatCompInstructions(
       2,
       "dataScience",
-      "Observe the progression on the graph. See if you can guess what is being represented here!"
+      "See if you can guess what the graph is representing!"
     ),
 
     image:
       "https://raw.githubusercontent.com/Stiegler-EdTech/mini-comp-bot/refs/heads/main/images/TV_Consumption.webp",
-    prompt: ``,
     inputType: "dropdown",
     options: [
       "Finding something to watch vs. watching it",
       "Amount of sugar in a Pixy Stix vs protein",
-      "Ratio or People to Penguins in Alaska",
-      "Ratio of people who prefer dogs to cats",
+      "Ratio of people to penguins in Antarctica",
+      "Ratio of people who prefer dogs to Chameleons",
     ],
     correctAnswer: ["Finding something to watch vs. watching it"],
   },
@@ -139,34 +139,45 @@ export const competitions: Competition[] = [
     onWrongMessage: `❌ Oh no, you got PHISHed 😳🎣🎣😱!! The second and third emails are the PHISHes. \n\n${phishesAnswers}`,
   },
   {
-    slug: "minis_cc_wk03_01",
+    slug: "minis_cc_wk02_01",
     week: 3,
     category: "Content Creation",
     name: "Patent That pt.3",
     instructions: formatCompInstructions(
       3,
       "contentCreation",
-      "Stiegler's content creation team is brainstorming caption ideas for a social media post. Help them out by filling in the blank! The best caption will be used in the post on the NØTWØRK!"
+      `MaRKeT reSEarCh suggests that many students struggle with ProRASstiNAtiOn. Stiegler EdTech has created a product that is sweeping the nation. This new product is called **NoCrastination**. We need your help to create a logo for this product. Think of a logo that is fun, memorable, and descriptive of the product idea. The best logo will be used in a post on the NØTWØRK!\n\u200B\nTry using tools like Leonardo.ai or Canva to generate images or create custom designs. Draw some inspiration from the logo shown below.`
     ),
     image:
-      "https://github.com/Stiegler-EdTech/mini-comp-bot/blob/main/images/NoCrastination_SM_Post.jpeg?raw=true",
-    prompt: `Write a caption for a post, advertising our latest product: **NoCrastination**.`,
-    inputType: "text",
+      "https://github.com/Stiegler-EdTech/mini-comp-bot/blob/main/images/NoCrastinationLogo.jpeg?raw=true",
+    prompt: "",
+    inputType: "image",
   },
-  // {
-  //   week: 3,
-  //   category: "Data Science",
-  //   name: "Graph the Trend",
-  //   instructions: formatCompInstructions(
-  //     3,
-  //     "dataScience",
-  //     "Predict the next data points on a trend graph."
-  //   ),
-  //   prompt: `Predict the next data points.`,
-  //   inputType: "dropdown",
-  //   options: ["10%", "15%", "20%"],
-  //   correctAnswer: ["15%"],
-  // },
+  {
+    slug: "minis_ds_wk03_01",
+    week: 3,
+    category: "Data Science",
+    name: "Chart Type Match",
+    instructions: formatCompInstructions(
+      3,
+      "dataScience",
+      "Identify the type of chart shown below."
+    ),
+    image:
+      "https://github.com/Stiegler-EdTech/mini-comp-bot/blob/add-data-science/images/Histogram.png?raw=true",
+    prompt: `This chart groups numbers into bins to show frequency. What is it called?`,
+    inputType: "dropdown",
+    options: ["Bar Chart", "Histogram", "Box Plot"],
+    correctAnswer: ["Histogram"],
+    onSuccessMessage: `✅ Awesome, you got that right! A giveaway is the Histograms have touching bars and compare measurements over a given range.\nThink about how these could be used in the Esports season:
+- **Histogram:** shows how many Fortnite players got different kill counts in matches (0-2 kills, 3-5 kills, 6-8 kills).
+-   **Bar Chart:** compares the number of students who prefer different games (Fortnite, Minecraft, Rocket League).
+-   **Box Plot:** summarizes match scores by showing the middle score, average range, and any unusually high or low outliers.`,
+    onWrongMessage: `❌ Not quite! It is a **Histogram**!\n\u200B\nA giveaway is that a Histogram has touching bars. Bar charts use separate groups to compare categories, box plots show a data spread, Histograms have touching bars that compare measurements over a given range.\nThink about how these could be used in the Esports season:
+- **Histogram:** shows how many Fortnite players got different kill counts in matches (0-2 kills, 3-5 kills, 6-8 kills).
+-   **Bar Chart:** compares the number of students who prefer different games (Fortnite, Minecraft, Rocket League).
+-   **Box Plot:** summarizes match scores by showing the middle score, average range, and any unusually high or low outliers.`,
+  },
   // WEEK 4
   {
     slug: "minis_cs_wk04_01",
@@ -201,14 +212,23 @@ export const competitions: Competition[] = [
     slug: "minis_ds_wk04_01",
     week: 4,
     category: "Data Science",
-    name: "Graph the Facts",
+    name: "Data Pattern Recognition",
     instructions: formatCompInstructions(
       4,
       "dataScience",
-      "Guess the trend in the provide graph."
+      "What comes next in the sequence? Look at the pattern in the numbers, see if you can figure out what the pattern is. Once you do, guess the next number in the sequence!"
     ),
-    prompt: `What does this graph tell you about the trend?`,
+    prompt: "**Sequence:** 14, 98, 686, ??",
     inputType: "text",
+    correctAnswer: ["4802"],
+    onSuccessMessage:
+      "✅ Spot on! The numbers in the sequence are being multiplied by 7 each time, so **4802** is next.",
+    onWrongMessage: `❌ Oops, that's not right! The correct answer is **4802**.\n\u200B\n
+The sequence multiplies each number by **7**:\n
+- **14 × 7 = 98**
+- **98 × 7 = 686**
+- **686 × 7 = 4802**\n\u200B\n
+Next time, try dividing consecutive numbers to spot the pattern! For example, \`98 ÷ 14 = 7\` shows that 98 is 7 times larger than 14. If you get the same result each time, that's the multiplier. Here, it confirms that every step multiplies by **7**!`,
   },
   // WEEK 5
   {
@@ -246,14 +266,19 @@ export const competitions: Competition[] = [
     slug: "minis_ds_wk05_01",
     week: 5,
     category: "Data Science",
-    name: "Graph the Facts (Part 2)",
+    name: "Is it an Outlier?",
     instructions: formatCompInstructions(
       5,
       "dataScience",
-      "Analyze this trend graph and explain it."
+      "Examine the highlighted data point. Does it seem to be an outlier compared to the rest of the data set?"
     ),
-    prompt: `What does this graph tell you about the trend?`,
-    inputType: "text",
+    prompt: `Data Set: [21, 22, 20, 21, 23, 22, 21, 37, 22]\nHighlighted Data Point: 37`,
+    inputType: "button",
+    options: ["Yes", "No"],
+    correctAnswer: ["Yes"],
+    onSuccessMessage: "Correct! 37 is much higher than the other numbers.",
+    onWrongMessage:
+      "Not quite! 37 is way above the typical range of 20-23, making it an outlier.",
   },
   // WEEK 6
 ]

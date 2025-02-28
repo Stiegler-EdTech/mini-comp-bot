@@ -54,7 +54,9 @@ client.on("interactionCreate", async (interaction: Interaction) => {
     }
   } catch (error) {
     console.error(
-      `🚨Failed interaction ${interaction.id} from channel ${
+      `🚨Failed interaction (id:${interaction.id}) ${
+        interaction?.user.tag ? `by user ${interaction.user.tag}` : ""
+      } in channel ${
         interaction.channel && "name" in interaction.channel
           ? interaction.channel.name
           : "unknown"
@@ -72,3 +74,11 @@ client.on("interactionCreate", async (interaction: Interaction) => {
 
 // Start the bot
 client.login(BOT_TOKEN)
+
+process.on("uncaughtException", (error) => {
+  console.error("Uncaught Exception:", error)
+})
+
+process.on("unhandledRejection", (reason, promise) => {
+  console.error("Unhandled Rejection at:", promise, "reason:", reason)
+})

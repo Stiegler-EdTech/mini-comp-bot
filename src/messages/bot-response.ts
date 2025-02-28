@@ -7,7 +7,6 @@ import {
 import type { Competition, CompHeadings, ResponseType } from "../interfaces"
 
 // Default success and failure messages when students answer
-
 function defaultBotResponse(
   response: keyof ResponseType,
   correctAnswer?: string | string[]
@@ -20,8 +19,9 @@ function defaultBotResponse(
   return defaultResponse[response]
 }
 
-// Message sent to students when they submit an answer
+const notworkCTA = `You just got **500** Silver Coins:money_with_wings: :moneybag:! Head on over to [The NØTWØRK](https://thenotwork.org/challenges)`
 
+// Message sent to students when they submit an answer
 async function studentAnswerResponse(
   interaction:
     | StringSelectMenuInteraction
@@ -30,23 +30,20 @@ async function studentAnswerResponse(
   isCorrect: boolean,
   competition: Competition
 ) {
-  const plug = `You just got **500** Silver Coins:money_with_wings: :moneybag:! Head on over to [The NØTWØRK](https://thenotwork.org/challenges)`
-
   await interaction.reply({
     content: isCorrect
       ? `${
           competition.onSuccessMessage || defaultBotResponse("onSuccessMessage")
-        }\n\u200B\n${plug}`
+        }\n\u200B\n${notworkCTA}`
       : `${
           competition.onWrongMessage ||
           defaultBotResponse("onWrongMessage", competition.correctAnswer)
-        }\n\u200B\n${plug}`,
+        }\n\u200B\n${notworkCTA}`,
     flags: [MessageFlags.Ephemeral],
   })
 }
 
 // Success message sent to admin after mini challenge launch
-
 function adminLaunchResponse(
   week: number,
   competition: string,
@@ -65,7 +62,6 @@ function adminLaunchResponse(
 }
 
 // Initial message sent to students to introduce and explain the mini comp
-
 const compHeadings: CompHeadings = {
   cybersecurity: "Cybersecurity 💻🔐👾",
   contentCreation: "Content Creation :selfie:🎆📢",
@@ -77,8 +73,7 @@ function formatCompInstructions(
   category: keyof CompHeadings,
   instructions: string
 ) {
-  const plug =
-    "Participate to win 500 Silver Coins on The NØTWØRK! Head on over **`thenotwork.org/challenges`** to more exciting challenges!"
+  const plug = `Participate to win 500 Silver Coins on The NØTWØRK! Head on over to **\`thenotwork.org/challenges\`** to try more exciting challenges!`
   return `# [🏆Mini Challenges: Week ${week}] ${compHeadings[category]}\n\u200B\n**${plug}**\n\u200B\n${instructions}\n\u200B\n`
 }
 
