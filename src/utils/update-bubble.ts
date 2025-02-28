@@ -95,7 +95,7 @@ export default async function updateBubble({
       console.error("Bubble API Error:", response.status, responseData)
     } else {
       console.log(
-        `✅ Successfully posted answer by ${interaction.user.tag} (user_id: ${interaction.user.id}) from week ${competition.week}'s ${competition.category} competition to Bubble!`
+        `✅ Successfully posted answer to Bubble: ${interaction.user.tag} (${interaction.user.id}) from week ${competition.week} ${competition.category}!`
       )
     }
   } catch (error) {
