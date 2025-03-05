@@ -6,7 +6,7 @@ import {
   DiscordAPIError,
 } from "discord.js"
 import type { Interaction } from "discord.js"
-import { BOT_TOKEN } from "./config"
+import { BOT_ENV, BOT_TOKEN } from "./config"
 import { miniBatchCommand, startCommand } from "./commands/index"
 import {
   onButtonInteraction,
@@ -27,7 +27,7 @@ commands.set(startCommand.data.name, startCommand)
 commands.set(miniBatchCommand.data.name, miniBatchCommand)
 
 client.once("ready", () => {
-  console.log(`✅ Logged in as ${client.user?.tag}`)
+  console.log(`✅ Logged in as ${client.user?.tag} in environment ${BOT_ENV}`)
 })
 
 client.on("interactionCreate", async (interaction: Interaction) => {
