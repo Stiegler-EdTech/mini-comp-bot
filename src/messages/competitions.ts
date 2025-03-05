@@ -153,7 +153,8 @@ export const competitions: Competition[] = [
       
       Guess the company from this zoomed-in logo 🔍`
     ),
-    image: "", // TODOL throw the raw image url here
+    image:
+      "https://raw.githubusercontent.com/Stiegler-EdTech/mini-comp-bot/refs/heads/main/images/week3_logo.webp",
     inputType: "dropdown",
     options: ["Razer", "SteelSeries", "Corsair", "HyperX"],
     correctAnswer: ["HyperX"],
@@ -182,7 +183,8 @@ HyperX has a strong, recognizable logo that stands out with its sleek, modern de
       "dataScience",
       "This chart groups numbers into bins to show frequency. What is this graph called? 📊"
     ),
-    image: "", // TODOL throw the raw image url here
+    image:
+      "https://raw.githubusercontent.com/Stiegler-EdTech/mini-comp-bot/refs/heads/main/images/week3_chart.webp",
     inputType: "dropdown",
     options: ["Bar Chart", "Histogram", "Box Plot"],
     correctAnswer: ["Histogram"],
