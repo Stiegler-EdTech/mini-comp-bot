@@ -11,7 +11,7 @@ import type {
   ModalSubmitInteraction,
   StringSelectMenuInteraction,
 } from "discord.js"
-import { BOT_TOKEN } from "./config"
+import { BOT_TOKEN, GUILD_ID } from "./config"
 import { miniBatchCommand, startCommand } from "./commands/index"
 import {
   onButtonInteraction,
@@ -35,28 +35,28 @@ client.once("ready", () => {
   console.log(`✅ Logged in as ${client.user?.tag}`)
 })
 
-function isInteractionFromCurrentENV(
-  interaction:
-    | ButtonInteraction
-    | StringSelectMenuInteraction
-    | ModalSubmitInteraction
-) {
-  if (
-    interaction.message &&
-    interaction.message.author.id !== client.user?.id
-  ) {
-    console.log("Interaction not from current ENV")
+function isInteractionFromCurrentENV(interaction: Interaction) {
+  if (interaction.guildId !== GUILD_ID) {
+    console.log(
+      `Interaction from guild ${interaction.guildId} NOT from ENV with guild id ${GUILD_ID}`
+    )
     return false // Ignore interactions from the other bot (testing vs prdo)
   }
-  console.log("Interaction IS from current ENV")
+  console.log(
+    `Interaction from guild ${interaction.guildId} IS from current ENV with guild id ${GUILD_ID}`
+  )
   return true
 }
 
 client.on("interactionCreate", async (interaction: Interaction) => {
+  if (!isInteractionFromCurrentENV(interaction)) return
+
   try {
     if (interaction.isChatInputCommand()) {
       const command = commands.get(interaction.commandName)
-      if (!command) return
+      if (!command){
+        console.warn(`⚠️ Unknown command: ${interaction.commandName}`)
+      return}
 
       try {
         await command.execute(interaction)
@@ -68,14 +68,11 @@ client.on("interactionCreate", async (interaction: Interaction) => {
         })
       }
     } else if (interaction.isButton()) {
-      isInteractionFromCurrentENV(interaction) &&
-        onButtonInteraction(interaction)
+      await onButtonInteraction(interaction)
     } else if (interaction.isStringSelectMenu()) {
-      isInteractionFromCurrentENV(interaction) &&
-        onStringSelectMenuInteraction(interaction)
+      await onStringSelectMenuInteraction(interaction)
     } else if (interaction.isModalSubmit()) {
-      isInteractionFromCurrentENV(interaction) &&
-        onModalSubmitInteraction(interaction)
+      await onModalSubmitInteraction(interaction)
     }
   } catch (error) {
     console.error(
