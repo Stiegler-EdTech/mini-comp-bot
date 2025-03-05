@@ -151,7 +151,7 @@ export const competitions: Competition[] = [
       "contentCreation",
       `Branding is what makes a company stand out ✨—just like a logo!
       
-      Guess the company from this zoomed-in logo 🔍`
+Guess the company from this zoomed-in logo 🔍`
     ),
     image:
       "https://raw.githubusercontent.com/Stiegler-EdTech/mini-comp-bot/refs/heads/main/images/week3_logo.webp",

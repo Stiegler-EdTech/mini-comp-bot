@@ -3,6 +3,7 @@ const phishes = `
 **Subject:** 🚨URGENT: Free Pizza for All Students! 🍕
 **From:** School Rewards [<StudentRewards@school-perks.com>]()
 **To:** Student
+
 Dear student,
 
 Your class has been selected for a **FREE PIZZA FRIDAY**!
