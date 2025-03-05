@@ -67,7 +67,7 @@ export const competitions: Competition[] = [
     instructions: formatCompInstructions(
       2,
       "cybersecurity",
-      "Identify the number of weaknesses in the given password"
+      "Identify the number of weaknesses in the given password! 🔒"
     ),
     prompt: `**Password:** Example123`,
     inputType: "button",
@@ -79,14 +79,14 @@ export const competitions: Competition[] = [
       "❌ Oops! That is incorrect. `Example123` has 4 weaknesses! It is too short, the letters used form a simple word, the numbers are in a stereotypical order, and there are no special characters.",
   },
   {
-    slug: "minis_cc_wk03_01",
+    slug: "minis_cc_wk02_01",
     week: 2,
     category: "Content Creation",
     name: "Patent That pt.2",
     instructions: formatCompInstructions(
       2,
       "contentCreation",
-      "Write a caption for a post, advertising our latest product: **NoCrastination**. The best caption will be used in the post on the NØTWØRK!"
+      "Write a caption for a post, advertising our latest product: **NoCrastination**. The best caption will be used in the post on the NØTWØRK! 📝 "
     ),
     image:
       "https://github.com/Stiegler-EdTech/mini-comp-bot/blob/main/images/NoCrastination_SM_Post.jpeg?raw=true",
@@ -100,7 +100,7 @@ export const competitions: Competition[] = [
     instructions: formatCompInstructions(
       2,
       "dataScience",
-      "See if you can guess what the graph is representing!"
+      "See if you can guess what the graph is representing! 📊"
     ),
 
     image:
@@ -139,7 +139,7 @@ export const competitions: Competition[] = [
     onWrongMessage: `❌ Oh no, you got PHISHed 😳🎣🎣😱!! The second and third emails are the PHISHes. \n\n${phishesAnswers}`,
   },
   {
-    slug: "minis_cc_wk02_01",
+    slug: "minis_cc_wk03_01",
     week: 3,
     category: "Content Creation",
     name: "Patent That pt.3",

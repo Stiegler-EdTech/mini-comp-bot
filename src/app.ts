@@ -5,8 +5,13 @@ import {
   MessageFlags,
   DiscordAPIError,
 } from "discord.js"
-import type { Interaction } from "discord.js"
-import { BOT_ENV, BOT_TOKEN } from "./config"
+import type {
+  ButtonInteraction,
+  Interaction,
+  ModalSubmitInteraction,
+  StringSelectMenuInteraction,
+} from "discord.js"
+import { BOT_TOKEN } from "./config"
 import { miniBatchCommand, startCommand } from "./commands/index"
 import {
   onButtonInteraction,
@@ -27,8 +32,25 @@ commands.set(startCommand.data.name, startCommand)
 commands.set(miniBatchCommand.data.name, miniBatchCommand)
 
 client.once("ready", () => {
-  console.log(`✅ Logged in as ${client.user?.tag} in environment ${BOT_ENV}`)
+  console.log(`✅ Logged in as ${client.user?.tag}`)
 })
+
+function isInteractionFromCurrentENV(
+  interaction:
+    | ButtonInteraction
+    | StringSelectMenuInteraction
+    | ModalSubmitInteraction
+) {
+  if (
+    interaction.message &&
+    interaction.message.author.id !== client.user?.id
+  ) {
+    console.log("Interaction not from current ENV")
+    return false // Ignore interactions from the other bot (testing vs prdo)
+  }
+  console.log("Interaction IS from current ENV")
+  return true
+}
 
 client.on("interactionCreate", async (interaction: Interaction) => {
   try {
@@ -46,11 +68,14 @@ client.on("interactionCreate", async (interaction: Interaction) => {
         })
       }
     } else if (interaction.isButton()) {
-      onButtonInteraction(interaction)
+      isInteractionFromCurrentENV(interaction) &&
+        onButtonInteraction(interaction)
     } else if (interaction.isStringSelectMenu()) {
-      onStringSelectMenuInteraction(interaction)
+      isInteractionFromCurrentENV(interaction) &&
+        onStringSelectMenuInteraction(interaction)
     } else if (interaction.isModalSubmit()) {
-      onModalSubmitInteraction(interaction)
+      isInteractionFromCurrentENV(interaction) &&
+        onModalSubmitInteraction(interaction)
     }
   } catch (error) {
     console.error(
@@ -74,11 +99,3 @@ client.on("interactionCreate", async (interaction: Interaction) => {
 
 // Start the bot
 client.login(BOT_TOKEN)
-
-process.on("uncaughtException", (error) => {
-  console.error("Uncaught Exception:", error)
-})
-
-process.on("unhandledRejection", (reason, promise) => {
-  console.error("Unhandled Rejection at:", promise, "reason:", reason)
-})
