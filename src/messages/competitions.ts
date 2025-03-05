@@ -123,20 +123,23 @@ export const competitions: Competition[] = [
     instructions: formatCompInstructions(
       3,
       "cybersecurity",
-      "Identify which of these emails might be phishing attempts."
+      "Is this email phishing or totally phine (safe)?"
     ),
     prompt: phishes,
-    inputType: "dropdown",
-    options: [
-      "A bunch of Phishes",
-      "All Safe",
-      "Safe, Phish, Phish",
-      "Safe, Safe, Phish",
-      "Phish, Safe, Safe",
-    ],
-    correctAnswer: ["Safe, Phish, Phish"],
-    onSuccessMessage: `🎉 You got it! The second and third emails are PHISHes. \n\n${phishesAnswers}`,
-    onWrongMessage: `❌ Oh no, you got PHISHed 😳🎣🎣😱!! The second and third emails are the PHISHes. \n\n${phishesAnswers}`,
+    inputType: "button",
+    options: ["Phish", "Safe"],
+    correctAnswer: ["Phish"],
+    onSuccessMessage: `🎉 You got it! This is a phish 🐟. It’s too good to be true, uses urgency tactics, a non-school email, and fake verification.`,
+    onWrongMessage: `❌ Oh no, you got PHISHed 😳🎣🎣😱!! This email is a **scam**.
+
+🚩 **Red Flags:**
+
+**Too Good to Be True** (free pizza just for being a student?), **urgency tactic** (“Expires in 24 hours!”) to rush you into clicking without thinking, a non-school **email domain** (@school-perks.com), & **fake verification request** (student ID & school email)
+
+🔍 **How to Spot Phishing Emails**
+- **Check the sender’s email:** Does it match the official domain?
+- **Look for urgency tactics:** Phishers try to rush you into acting.
+- **Verify links:** Hover over links before clicking to see the real URL.`,
   },
   {
     slug: "minis_cc_wk03_01",
@@ -146,37 +149,62 @@ export const competitions: Competition[] = [
     instructions: formatCompInstructions(
       3,
       "contentCreation",
-      `MaRKeT reSEarCh suggests that many students struggle with ProRASstiNAtiOn. Stiegler EdTech has created a product that is sweeping the nation. This new product is called **NoCrastination**. We need your help to create a logo for this product. Think of a logo that is fun, memorable, and descriptive of the product idea. The best logo will be used in a post on the NØTWØRK!\n\u200B\nTry using tools like Leonardo.ai or Canva to generate images or create custom designs. Draw some inspiration from the logo shown below.`
+      `Branding is what makes a company stand out ✨—just like a logo!
+      
+      Guess the company from this zoomed-in logo 🔍`
     ),
-    image:
-      "https://github.com/Stiegler-EdTech/mini-comp-bot/blob/main/images/NoCrastinationLogo.jpeg?raw=true",
-    prompt: "",
-    inputType: "image",
+    image: "", // TODOL throw the raw image url here
+    inputType: "dropdown",
+    options: ["Razer", "SteelSeries", "Corsair", "HyperX"],
+    correctAnswer: ["HyperX"],
+    onSuccessMessage: `🎉 **You got it**! This logo is for **HyperX**.
+
+HyperX has a strong, recognizable logo that stands out with its sleek, modern design and bold typography 🔠. The dynamic ‘X’ adds a sense of speed and precision, making it instantly identifiable in the gaming and esports world 🎮.`,
+    onWrongMessage: `❌ Not quite! Here are the qualities of a strong logo:
+
+✅ **Simplicity** – Clean, uncluttered, and easy to recognize.
+
+✅ **Memorability** – Unique and instantly identifiable.
+
+✅ **Versatility** – Looks great on any size or medium.
+
+✅ **Relevance** – Matches the brand’s identity and industry.
+
+HyperX has a strong, recognizable logo that stands out with its sleek, modern design and bold typography. The dynamic ‘X’ adds a sense of speed and precision, making it instantly identifiable in the gaming and esports world.`,
   },
   {
     slug: "minis_ds_wk03_01",
     week: 3,
     category: "Data Science",
-    name: "Chart Type Match",
+    name: "Name that Chart",
     instructions: formatCompInstructions(
       3,
       "dataScience",
-      "Identify the type of chart shown below."
+      "This chart groups numbers into bins to show frequency. What is this graph called? 📊"
     ),
-    image:
-      "https://github.com/Stiegler-EdTech/mini-comp-bot/blob/add-data-science/images/Histogram.png?raw=true",
-    prompt: `This chart groups numbers into bins to show frequency. What is it called?`,
+    image: "", // TODOL throw the raw image url here
     inputType: "dropdown",
     options: ["Bar Chart", "Histogram", "Box Plot"],
     correctAnswer: ["Histogram"],
-    onSuccessMessage: `✅ Awesome, you got that right! A giveaway is the Histograms have touching bars and compare measurements over a given range.\nThink about how these could be used in the Esports season:
-- **Histogram:** shows how many Fortnite players got different kill counts in matches (0-2 kills, 3-5 kills, 6-8 kills).
--   **Bar Chart:** compares the number of students who prefer different games (Fortnite, Minecraft, Rocket League).
--   **Box Plot:** summarizes match scores by showing the middle score, average range, and any unusually high or low outliers.`,
-    onWrongMessage: `❌ Not quite! It is a **Histogram**!\n\u200B\nA giveaway is that a Histogram has touching bars. Bar charts use separate groups to compare categories, box plots show a data spread, Histograms have touching bars that compare measurements over a given range.\nThink about how these could be used in the Esports season:
-- **Histogram:** shows how many Fortnite players got different kill counts in matches (0-2 kills, 3-5 kills, 6-8 kills).
--   **Bar Chart:** compares the number of students who prefer different games (Fortnite, Minecraft, Rocket League).
--   **Box Plot:** summarizes match scores by showing the middle score, average range, and any unusually high or low outliers.`,
+    onSuccessMessage: `🎉 **You got it**! This is a **Histogram**.
+
+A giveaway is that a **Histogram** has **touching bars**. Bar charts use separate groups to compare categories, box plots show a data spread, Histograms have touching bars that compare measurements over a given range.
+
+*Think about how these could be used in the Esports season:*
+
+-   **Histogram:** shows how many Fortnite players got different kill counts in matches (0-2 kills, 3-5 kills, 6-8 kills) 🔫
+-   **Bar Chart:** compares the number of students who prefer different games (Fortnite, Minecraft, Rocket League) ⚽🔫👾
+-   **Box Plot:** summarizes match scores by showing the middle score, average range, and any unusually high or low outliers 👥`,
+    onWrongMessage: `❌ Not quite! This is a **Histogram**.
+
+A giveaway is that a **Histogram** has **touching bars**. Bar charts use separate groups to compare categories, box plots show a data spread, Histograms have touching bars that compare measurements over a given range.
+
+*Think about how these could be used in the Esports season:*
+
+-   **Histogram:** shows how many Fortnite players got different kill counts in matches (0-2 kills, 3-5 kills, 6-8 kills) 🔫
+- **Bar Chart:** compares the number of students who prefer different games (Fortnite, Minecraft, Rocket League) ⚽🔫👾
+- **Box Plot:** summarizes match scores by showing the middle score, average range, and any unusually high or low outliers 👥
+    `,
   },
   // WEEK 4
   {
