@@ -35,28 +35,19 @@ client.once("ready", () => {
   console.log(`✅ Logged in as ${client.user?.tag}`)
 })
 
-function isInteractionFromCurrentENV(interaction: Interaction) {
-  if (interaction.guildId !== GUILD_ID) {
-    console.log(
-      `Interaction from guild ${interaction.guildId} NOT from ENV with guild id ${GUILD_ID}`
-    )
-    return false // Ignore interactions from the other bot (testing vs prdo)
-  }
-  console.log(
-    `Interaction from guild ${interaction.guildId} IS from current ENV with guild id ${GUILD_ID}`
-  )
-  return true
-}
-
 client.on("interactionCreate", async (interaction: Interaction) => {
-  if (!isInteractionFromCurrentENV(interaction)) return
+  if (interaction.guildId !== GUILD_ID) {
+    // Ignore interactions that are not from/to the bot sending the message (testing vs prod)
+    return
+  }
 
   try {
     if (interaction.isChatInputCommand()) {
       const command = commands.get(interaction.commandName)
-      if (!command){
+      if (!command) {
         console.warn(`⚠️ Unknown command: ${interaction.commandName}`)
-      return}
+        return
+      }
 
       try {
         await command.execute(interaction)
