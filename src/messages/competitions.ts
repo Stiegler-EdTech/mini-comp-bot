@@ -217,11 +217,23 @@ A giveaway is that a **Histogram** has **touching bars**. Bar charts use separat
     instructions: formatCompInstructions(
       4,
       "cybersecurity",
-      "Decrypt a message using the Caesar Cipher. The Caesar cipher encodes messages by shifting each letter forward 7 letter; they wrap around at the end. For example: A = H, X = D. **Be sure to use ONLY lowercase letters:**"
+      `Decrypt a message using the Caesar Cipher. To decode, shift each letter backwards 🔙 3 letters. For example: D = A, E = B, F = C\n\u200B\n**What is the secret message?**🔐`
     ),
-    prompt: `mhza ylmslelz dpu nhtlz`,
-    inputType: "text",
-    correctAnswer: ["fast reflexes win games"],
+    prompt: `Krs Rq Wkh Jdph`,
+    inputType: "dropdown",
+    options: [
+      "Get on the grind",
+      "Join the lobby",
+      "Press start to play",
+      "Hop on the game",
+    ],
+    correctAnswer: ["Hop on the game"],
+    onSuccessMessage: `🎉 **You got it!** "Hop on the game" is the correct phrase!
+
+**Caesar ciphers** work by shifting letters forward ➡️ in the alphabet, making a simple yet effective way to *encode* messages. To *decode*, letters shift backwards ⬅️`,
+    onWrongMessage: `❌ Access denied! This message decoded says “**Hop on the game**”
+
+This example highlights how **Caesar ciphers** can be tricky if you don't decode the shift correctly. Since letters are shifted in the alphabet, guessing the wrong phrase means the pattern wasn’t fully cracked.`,
   },
   {
     slug: "minis_cc_wk04_01",
@@ -231,12 +243,26 @@ A giveaway is that a **Histogram** has **touching bars**. Bar charts use separat
     instructions: formatCompInstructions(
       4,
       "contentCreation",
-      "Help the content creation team come up with a clever meme to post in support of our latest product **NoCrastination**."
+      `Colors make a brand memorable ⭐\n\u200B\nGuess the company from their colors 🎨`
     ),
-    image:
-      "https://raw.githubusercontent.com/Stiegler-EdTech/mini-comp-bot/refs/heads/main/images/NoCrastination_meme_1.webp",
-    prompt: `Complete the text for this meme.`,
-    inputType: "text",
+    image: ``, // TODO: replace with image url
+    inputType: "dropdown",
+    options: ["Pepsi", "TikTok", "T-Mobile", "GoPro"],
+    correctAnswer: ["TikTok"],
+    onSuccessMessage: `🎉 **You got it!** These are **TikTok’s** colors.
+
+TikTok's bold and vibrant branding makes it instantly recognizable 📱. The combination of black, cyan, and magenta gives it a modern, energetic feel, reflecting its fast-paced, creative community 🖤🩵🤍🩷.`,
+    onWrongMessage: `❌ Not quite! Here are the qualities of a strong logo:
+
+✅ Simple – Clean, uncluttered, and easy to recognize.
+
+✅ Memorable – Unique and instantly identifiable.
+
+✅ Versatile – Looks great on any size or medium.
+
+✅ Relevant – Matches the brand’s identity and industry.
+
+TikTok’s logo is bold and instantly recognizable with its **sleek, modern typography and vibrant color scheme** 🎨. The combination of black, cyan, and magenta reflects its dynamic, fast-paced, and creative community, making it stand out in the world of social media.`,
   },
   {
     slug: "minis_ds_wk04_01",
@@ -246,19 +272,22 @@ A giveaway is that a **Histogram** has **touching bars**. Bar charts use separat
     instructions: formatCompInstructions(
       4,
       "dataScience",
-      "What comes next in the sequence? Look at the pattern in the numbers, see if you can figure out what the pattern is. Once you do, guess the next number in the sequence!"
+      `Look at the pattern in the numbers, see if you can figure out what the pattern is. 🔎\n\u200B\n**What comes next in the sequence**`
     ),
-    prompt: "**Sequence:** 14, 98, 686, ??",
-    inputType: "text",
-    correctAnswer: ["4802"],
-    onSuccessMessage:
-      "✅ Spot on! The numbers in the sequence are being multiplied by 7 each time, so **4802** is next.",
-    onWrongMessage: `❌ Oops, that's not right! The correct answer is **4802**.\n\u200B\n
-The sequence multiplies each number by **7**:\n
-- **14 × 7 = 98**
-- **98 × 7 = 686**
-- **686 × 7 = 4802**\n\u200B\n
-Next time, try dividing consecutive numbers to spot the pattern! For example, \`98 ÷ 14 = 7\` shows that 98 is 7 times larger than 14. If you get the same result each time, that's the multiplier. Here, it confirms that every step multiplies by **7**!`,
+    prompt: "Sequence: 5, 15, 35, 65, ??",
+    inputType: "button",
+    options: ["95", "105"],
+    correctAnswer: ["105"],
+    onSuccessMessage: `🎉 **You got it!** The correct answer is **105!**
+    
+    You cracked the pattern by spotting the increasing differences (+10, +20, +30, +40). You're thinking like a data expert, spotting patterns and making logical predictions like a pro 😎`,
+    onWrongMessage: `❌ Close! The next number is 105.
+
+The pattern in this sequence follows increasing differences (+10, +20, +30, +40).
+
+**Here’s how you can crack it next time:**
+1️⃣ Check the differences between each number to spot a pattern.
+2️⃣ Look for a consistent rule (in this case, the difference increases by 10 each time).`,
   },
   // WEEK 5
   {
