@@ -245,7 +245,7 @@ This example highlights how **Caesar ciphers** can be tricky if you don't decode
       "contentCreation",
       `Colors make a brand memorable ⭐\n\u200B\nGuess the company from their colors 🎨`
     ),
-    image: ``, // TODO: replace with image url
+    image: `https://raw.githubusercontent.com/Stiegler-EdTech/mini-comp-bot/refs/heads/main/images/brand-colors.webp`,
     inputType: "dropdown",
     options: ["Pepsi", "TikTok", "T-Mobile", "GoPro"],
     correctAnswer: ["TikTok"],
