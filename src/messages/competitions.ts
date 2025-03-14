@@ -217,7 +217,7 @@ A giveaway is that a **Histogram** has **touching bars**. Bar charts use separat
     instructions: formatCompInstructions(
       4,
       "cybersecurity",
-      `Decrypt a message using the Caesar Cipher. To decode, shift each letter backwards 🔙 3 letters. For example: D = A, E = B, F = C\n\u200B\n**What is the secret message?**🔐`
+      `Decrypt a message using the Caesar Cipher. To decode, shift each letter backwards 3 letters.\n\u200B\nFor example: D = A, E = B, F = C 🔒\n\u200B\n**What is the secret message?** 🔐`
     ),
     prompt: `Krs Rq Wkh Jdph`,
     inputType: "dropdown",
@@ -272,11 +272,11 @@ TikTok’s logo is bold and instantly recognizable with its **sleek, modern typo
     instructions: formatCompInstructions(
       4,
       "dataScience",
-      `Look at the pattern in the numbers, see if you can figure out what the pattern is. 🔎\n\u200B\n**What comes next in the sequence**`
+      `Analyze the sequence and see if you can figure out **what number comes next!** 🔎`
     ),
     prompt: "Sequence: 5, 15, 35, 65, ??",
     inputType: "button",
-    options: ["95", "105"],
+    options: ["95", "85", "105"],
     correctAnswer: ["105"],
     onSuccessMessage: `🎉 **You got it!** The correct answer is **105!**
     
