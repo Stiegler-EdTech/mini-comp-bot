@@ -74,7 +74,8 @@ function formatCompInstructions(
   instructions: string
 ) {
   const plug = `Participate to win 500 Silver Coins on The NØTWØRK! Head on over to **\`thenotwork.org/challenges\`** to try more exciting challenges!`
-  return `# [🏆Mini Challenges: Week ${week}] ${compHeadings[category]}\n\u200B\n**${plug}**\n\u200B\n${instructions}\n\u200B\n`
+  // `# [🏆Mini Challenges: Week ${week}] ${compHeadings[category]}\n\u200B\n**${plug}**\n\u200B\n${instructions}\n\u200B\n`
+  return `# [🏆Mini Challenges: Week ${week}] ${compHeadings[category]}\n\u200B\n${instructions}\n\u200B\n`
 }
 
 export {

@@ -298,13 +298,18 @@ The pattern in this sequence follows increasing differences (+10, +20, +30, +40)
     instructions: formatCompInstructions(
       5,
       "cybersecurity",
-      "Decrypt this message using the Atbash (Substitution) Cipher key. Use the image below as a guide. To decode the message, you'll need to flip the alphabet and transpose the letters onto the encrypted message. **Be sure to use ONLY lowercase letters:**"
+      "Decrypt this message using the Atbash (Substitution) Cipher key. Use the image below as a guide."
     ),
     image:
       "https://www.wikihow.com/images/thumb/b/b9/Create-Substitution-Ciphers-Step-3.jpg/aid309898-v4-728px-Create-Substitution-Ciphers-Step-3.jpg",
-    prompt: `xsznkrlmh dlip zh z gvzn`,
-    inputType: "text",
-    correctAnswer: ["champions work as a team"],
+    prompt: `ABBAA ABBBA AAABA`,
+    inputType: "dropdown",
+    options: ["FPS", "RPG", "NPC", "AFK"],
+    correctAnswer: ["NPC"],
+    onSuccessMessage: `🎉 **You got it**! Using Bacon’s Code, “*ABBAA ABBBA AAABA*” decoded is “NPC”! Nice work 👏 Unless you’re an NPC… 🤣`,
+    onWrongMessage: `❌ Close! Using Bacon’s Code, “*ABBAA ABBBA AAABA*” decoded is **“NPC”**.
+
+This is an example of how to use Bacon’s Code. Bacon’s Code replaces each letter of the English alphabet with a 5-letter sequence. For example, A = AAAAA`,
   },
   {
     slug: "minis_cc_wk05_01",
@@ -314,12 +319,19 @@ The pattern in this sequence follows increasing differences (+10, +20, +30, +40)
     instructions: formatCompInstructions(
       5,
       "contentCreation",
-      "Help the content creation team come up with a clever meme to post in support of our latest product **NoCrastination**."
+      `Which of the following videos has the **most YouTube views**?`
     ),
-    image:
-      "https://raw.githubusercontent.com/Stiegler-EdTech/mini-comp-bot/refs/heads/main/images/NoCrastination_meme_2.webp",
-    prompt: `Fill in the blanks for this meme by clicking the button below and filling in the input.`,
-    inputType: "text",
+    inputType: "dropdown",
+    options: [
+      "'Baby Shark Dance' by Pinkfong",
+      "$456,000 Squid Game In Real Life! by MrBeast",
+      "Official Minecraft Trailer",
+    ],
+    onSuccessMessage: `🎉 **You got it**! “Baby Shark Dance” holds the record for the most-viewed YouTube video, surpassing 15 billion views. 🤯`,
+    onWrongMessage: `❌ Not quite! Surpringly, “**Baby Shark Dance**” holds the record for the most-viewed YouTube video, surpassing 15 billion views. 🤯
+
+🎶 Its interactive dance, easy-to-remember tune, and strong presence in social media challenges, memes, and family-friendly content helped it gain billions of views, making it viral. 🎶
+`,
   },
   {
     slug: "minis_ds_wk05_01",
@@ -329,15 +341,17 @@ The pattern in this sequence follows increasing differences (+10, +20, +30, +40)
     instructions: formatCompInstructions(
       5,
       "dataScience",
-      "Examine the highlighted data point. Does it seem to be an outlier compared to the rest of the data set?"
+      `One of your teammates popped off—or maybe they just got really lucky! 
+
+Look at the K/D ratios and **find the outlier** in the data set. 🎮🏆`
     ),
-    prompt: `Data Set: [21, 22, 20, 21, 23, 22, 21, 37, 22]\nHighlighted Data Point: 37`,
-    inputType: "button",
-    options: ["Yes", "No"],
-    correctAnswer: ["Yes"],
-    onSuccessMessage: "Correct! 37 is much higher than the other numbers.",
-    onWrongMessage:
-      "Not quite! 37 is way above the typical range of 20-23, making it an outlier.",
+    inputType: "dropdown",
+    options: ["1.2", "1.3", "1.1", "3.8", "1.4"],
+    correctAnswer: ["3.8"],
+    onSuccessMessage: `🎉 **You got it!** The player with a **3.8** K/D ratio had the craziest game 😎`,
+    onWrongMessage: `❌ Close! The player with a **3.8** K/D ratio had the craziest game 😎
+
+How to know? It is **significantly higher** than the other K/D ratios, which all fall within a close range around 1.1 to 1.4. The player could either have had an exceptional game or faced weaker teams, making their performance stand out from the rest.`,
   },
   // WEEK 6
 ]
