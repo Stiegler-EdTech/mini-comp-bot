@@ -327,6 +327,7 @@ This is an example of how to use Bacon’s Code. Bacon’s Code replaces each le
       "$456,000 Squid Game In Real Life! by MrBeast",
       "Official Minecraft Trailer",
     ],
+    correctAnswer: ["'Baby Shark Dance' by Pinkfong"],
     onSuccessMessage: `🎉 **You got it**! “Baby Shark Dance” holds the record for the most-viewed YouTube video, surpassing 15 billion views. 🤯`,
     onWrongMessage: `❌ Not quite! Surpringly, “**Baby Shark Dance**” holds the record for the most-viewed YouTube video, surpassing 15 billion views. 🤯
 
