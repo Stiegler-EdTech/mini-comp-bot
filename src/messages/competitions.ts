@@ -355,4 +355,53 @@ Look at the K/D ratios and **find the outlier** in the data set. 🎮🏆`
 How to know? It is **significantly higher** than the other K/D ratios, which all fall within a close range around 1.1 to 1.4. The player could either have had an exceptional game or faced weaker teams, making their performance stand out from the rest.`,
   },
   // WEEK 6
+  {
+    slug: "minis_cs_wk06_01",
+    week: 6,
+    category: "Cybersecurity",
+    name: "Pigpen Cipher",
+    instructions: formatCompInstructions(
+      6,
+      "cybersecurity",
+      `Decode the message using the **Pigpen Cipher**! 🐷🔐  
+  Use the cipher key provided in the image below. Each symbol represents a letter based on grid position.`
+    ),
+    image:
+      "https://raw.githubusercontent.com/Stiegler-EdTech/mini-comp-bot/main/images/pigpen_brawlhalla.webp",
+    prompt: `Here is an example of the cipher in use:
+
+|‾| |<u>‾</u>| |<u>·_</u> |<u>·_</u> |·<u>‾</u>
+H E L L O`,
+    inputType: "dropdown",
+    options: ["HELLO", "HOUSE", "GAMES", "CODES"],
+    correctAnswer: ["HELLO"],
+    onSuccessMessage: `🎉 **You cracked it!** The Pigpen Cipher spells **HELLO**.  
+  Pigpen ciphers were used by the **Freemasons** and even in **video game Easter eggs** 🧠👾`,
+    onWrongMessage: `❌ Not quite! The correct answer was **HELLO**.
+  
+  Here’s a tip:  
+  Use the cipher key to match **shapes and dots** to their letters. Each part of the grid (and whether there's a dot) reveals a clue to the letter it hides! 🔎`,
+  },
+  {
+    slug: "minis_ds_wk06_01",
+    week: 6,
+    category: "Data Science",
+    name: "Emoji Stats: Rank 'Em!",
+    instructions: formatCompInstructions(
+      6,
+      "dataScience",
+      `Analyze the data from a social post! Which emoji was used the **most**? 📊😄`
+    ),
+    image:
+      "https://raw.githubusercontent.com/Stiegler-EdTech/mini-comp-bot/main/images/emoji-stats-example.webp",
+    inputType: "dropdown",
+    options: ["😂", "💀", "😮", "👍"],
+    correctAnswer: ["😂"],
+    onSuccessMessage: `🎉 **Correct!** The 😂 emoji got the most reactions!
+  
+  This shows how analyzing basic charts helps us understand audience responses—especially on social platforms where emojis = data! 📈`,
+    onWrongMessage: `❌ Oops! The most-used emoji was 😂.
+  
+  Pay close attention to the emoji counts on the graph—basic visual analysis is the first step in great data science! 📊`,
+  },
 ]
