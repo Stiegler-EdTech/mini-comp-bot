@@ -359,29 +359,44 @@ How to know? It is **significantly higher** than the other K/D ratios, which all
     slug: "minis_cs_wk06_01",
     week: 6,
     category: "Cybersecurity",
-    name: "Pigpen Cipher",
+    name: "Binary Breakdown",
     instructions: formatCompInstructions(
       6,
       "cybersecurity",
-      `Decode the message using the **Pigpen Cipher**! 🐷🔐  
-  Use the cipher key provided in the image below. Each symbol represents a letter based on grid position.`
-    ),
-    image:
-      "https://raw.githubusercontent.com/Stiegler-EdTech/mini-comp-bot/main/images/pigpen_brawlhalla.webp",
-    prompt: `Here is an example of the cipher in use:
+      `The message below was encoded using **8-bit ASCII Binary** (the same way computers store letters). 💻  
 
-|‾| |<u>‾</u>| |<u>·_</u> |<u>·_</u> |·<u>‾</u>
-H E L L O`,
+Can you decode it and figure out what the word is?`
+    ),
+    image: "",
+    prompt: `01000001 01010110 01000001 01010100 01000001 01010010`,
     inputType: "dropdown",
-    options: ["HELLO", "HOUSE", "GAMES", "CODES"],
-    correctAnswer: ["HELLO"],
-    onSuccessMessage: `🎉 **You cracked it!** The Pigpen Cipher spells **HELLO**.  
-  Pigpen ciphers were used by the **Freemasons** and even in **video game Easter eggs** 🧠👾`,
-    onWrongMessage: `❌ Not quite! The correct answer was **HELLO**.
+    options: ["Avatar", "Vector", "Access", "Buffer"],
+    correctAnswer: ["Avatar"],
+    onSuccessMessage: `🎉 **Correct!** The binary spells **Avatar**.
   
-  Here’s a tip:  
-  Use the cipher key to match **shapes and dots** to their letters. Each part of the grid (and whether there's a dot) reveals a clue to the letter it hides! 🔎`,
+Binary is the foundation of how computers process data — every letter, number, or symbol gets turned into 1s and 0s! 🔢`,
+    onWrongMessage: `❌ Not quite! The correct answer is **Avatar**.
+  
+Each 8-digit binary chunk is a code for a letter using ASCII. For example, \`01000001\` = **A**.
+  
+Knowing how to decode binary helps you understand how data is stored and transmitted on digital systems!`,
   },
+  {
+    slug: "minis_cc_wk06_01",
+    week: 6,
+    category: "Content Creation",
+    name: "Name That Product",
+    instructions: formatCompInstructions(
+      6,
+      "contentCreation",
+      `Help us launch this new product! 🧠✨. We need to come up with a wildly memorable name for the lates Stiegler product (pictured below).  
+Check out the image and come up with a name. Think about who the target audience might be, and ideate a name that would be relevant to them that also describes the product.`
+    ),
+    image: "https://your-image-url-goes-here.com", // <-- replace with your product image URL
+    inputType: "text",
+    onSuccessMessage: `🎉 **Nice work!** Check in on the NØTWØRK at the end of the week to see if your name made it to the social page!`,
+  },
+
   {
     slug: "minis_ds_wk06_01",
     week: 6,
