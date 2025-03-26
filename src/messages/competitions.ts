@@ -363,38 +363,40 @@ How to know? It is **significantly higher** than the other K/D ratios, which all
     instructions: formatCompInstructions(
       6,
       "cybersecurity",
-      `The message below was encoded using **8-bit ASCII Binary** (the same way computers store letters). 💻  
-
-Can you decode it and figure out what the word is?`
+      `Decode the message below using ***8-bit ASCII Binary*** *(the same way computers store letters)*. Use the image below as a guide! 💻`
     ),
-    image: "",
-    prompt: `01000001 01010110 01000001 01010100 01000001 01010010`,
+    image:
+      "https://github.com/Stiegler-EdTech/mini-comp-bot/blob/main/images/binary.png?raw=true",
+    prompt: `01001100 01000001 01000111`,
     inputType: "dropdown",
-    options: ["Avatar", "Vector", "Access", "Buffer"],
-    correctAnswer: ["Avatar"],
-    onSuccessMessage: `🎉 **Correct!** The binary spells **Avatar**.
-  
-Binary is the foundation of how computers process data — every letter, number, or symbol gets turned into 1s and 0s! 🔢`,
-    onWrongMessage: `❌ Not quite! The correct answer is **Avatar**.
-  
-Each 8-digit binary chunk is a code for a letter using ASCII. For example, \`01000001\` = **A**.
-  
-Knowing how to decode binary helps you understand how data is stored and transmitted on digital systems!`,
+    options: ["BOT", "LAG", "GGS", "OPS"],
+    correctAnswer: ["LAG"],
+    onSuccessMessage: `🎉 You got it! Using an 8-bit ASCII Binary, “01001100 01000001 01000111” decoded is “LAG”! Nice work 👏`,
+    onWrongMessage: `❌ Not quite! Using an 8-bit ASCII Binary, “01001100 01000001 01000111” decoded is “LAG”.
+
+Each letter, number, or symbol is stored in a computer using an 8-bit binary code (8 ones and zeros). This format lets computers read, store, and share text using only binary! 📖
+`,
   },
   {
     slug: "minis_cc_wk06_01",
     week: 6,
     category: "Content Creation",
-    name: "Name That Product",
+    name: "Name That Logo",
     instructions: formatCompInstructions(
       6,
       "contentCreation",
-      `Help us launch this new product! 🧠✨. We need to come up with a wildly memorable name for the lates Stiegler product (pictured below).  
-Check out the image and come up with a name. Think about who the target audience might be, and ideate a name that would be relevant to them that also describes the product.`
+      `Guess which app this is by the pixelated icon shown below! 👀🔎`
     ),
-    image: "https://your-image-url-goes-here.com", // <-- replace with your product image URL
-    inputType: "text",
-    onSuccessMessage: `🎉 **Nice work!** Check in on the NØTWØRK at the end of the week to see if your name made it to the social page!`,
+    options: ["Discord", "Twitch", "Viber", "X"],
+    correctAnswer: ["Discord"],
+    image:
+      "https://github.com/Stiegler-EdTech/mini-comp-bot/blob/main/images/duck_box.jpeg?raw=true",
+    inputType: "dropdown",
+    onSuccessMessage: `🎉 You got it! This is Discord’s app icon! 👾`,
+    onWrongMessage: `❌ Good guess! This is a pixelated image of Discord’s app icon. 👾
+
+Even when glitched, the color and vibe make it recognizable to anyone familiar with online communities or gaming.
+`,
   },
 
   {
@@ -405,18 +407,14 @@ Check out the image and come up with a name. Think about who the target audience
     instructions: formatCompInstructions(
       6,
       "dataScience",
-      `Analyze the data from a social post! Which emoji was used the **most**? 📊😄`
+      `What is the most played VALORANT map? 🤔`
     ),
-    image:
-      "https://raw.githubusercontent.com/Stiegler-EdTech/mini-comp-bot/main/images/emoji-stats-example.webp",
     inputType: "dropdown",
-    options: ["😂", "💀", "😮", "👍"],
-    correctAnswer: ["😂"],
-    onSuccessMessage: `🎉 **Correct!** The 😂 emoji got the most reactions!
-  
-  This shows how analyzing basic charts helps us understand audience responses—especially on social platforms where emojis = data! 📈`,
-    onWrongMessage: `❌ Oops! The most-used emoji was 😂.
-  
-  Pay close attention to the emoji counts on the graph—basic visual analysis is the first step in great data science! 📊`,
+    options: ["Haven", "Pearl", "Ascent", "Lotus"],
+    correctAnswer: ["Ascent"],
+    onSuccessMessage: `🎉 You got it! Ascent is the most popular map with a play rate of 13.6% overall.`,
+    onWrongMessage: `❌ Close! Ascent is the most popular map with a play rate of 13.6% overall.
+
+Ascent's popularity in VALORANT stems from its traditional, balanced layout and straightforward setup, making it a great training and competitive map. 🎮`,
   },
 ]
