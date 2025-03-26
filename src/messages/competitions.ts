@@ -366,7 +366,7 @@ How to know? It is **significantly higher** than the other K/D ratios, which all
       `Decode the message below using ***8-bit ASCII Binary*** *(the same way computers store letters)*. Use the image below as a guide! 💻`
     ),
     image:
-      "https://github.com/Stiegler-EdTech/mini-comp-bot/blob/main/images/binary.png?raw=true",
+      "https://raw.githubusercontent.com/Stiegler-EdTech/mini-comp-bot/refs/heads/main/images/binary_key.webp",
     prompt: `01001100 01000001 01000111`,
     inputType: "dropdown",
     options: ["BOT", "LAG", "GGS", "OPS"],
@@ -390,7 +390,7 @@ Each letter, number, or symbol is stored in a computer using an 8-bit binary cod
     options: ["Discord", "Twitch", "Viber", "X"],
     correctAnswer: ["Discord"],
     image:
-      "https://github.com/Stiegler-EdTech/mini-comp-bot/blob/main/images/duck_box.jpeg?raw=true",
+      "https://raw.githubusercontent.com/Stiegler-EdTech/mini-comp-bot/refs/heads/main/images/discord_pixelated.webp",
     inputType: "dropdown",
     onSuccessMessage: `🎉 You got it! This is Discord’s app icon! 👾`,
     onWrongMessage: `❌ Good guess! This is a pixelated image of Discord’s app icon. 👾
